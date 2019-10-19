@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa503b104f700e4337a4bf209a56bc8a",
+    "content-hash": "f53cd98b3a79282bbaa70dfca2d0a9a7",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1415,6 +1415,48 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "socrata/soda-php",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/socrata/soda-php.git",
+                "reference": "9efb7ab9ce12b9753c76e6720bce094fa62f6242"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/socrata/soda-php/zipball/9efb7ab9ce12b9753c76e6720bce094fa62f6242",
+                "reference": "9efb7ab9ce12b9753c76e6720bce094fa62f6242",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "socrata\\soda\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "A simple library to make it easier to access SODA services from PHP",
+            "homepage": "http://dev.socrata.com",
+            "keywords": [
+                "SODA",
+                "open data",
+                "sdk",
+                "socrata"
+            ],
+            "time": "2017-10-10T23:44:13+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4880,7 +4922,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "socrata/soda-php": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
