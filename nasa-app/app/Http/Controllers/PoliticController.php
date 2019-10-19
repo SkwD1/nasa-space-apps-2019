@@ -24,7 +24,7 @@ class PoliticController extends Controller
      */
     public function create()
     {
-        $politic = New Politic();
+        //
     }
 
     /**
@@ -35,7 +35,9 @@ class PoliticController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $politic = New Politic();
+        $politic->description = $request->input("description");
+        $politic->impact = $request->input("impact");
     }
 
     /**
