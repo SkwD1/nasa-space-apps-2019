@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateRedesSociaisTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('redes_sociais', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->enum('rede_social', ['Facebook', 'Twitter', 'Instagram']);
+            $table->string('link');
+            $table->bigInteger('instituicao_id')->unsigned();
+            $table->foreign('instituicao_id')->references('id')->on('instituicao');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('redes_sociais');
+    }
+}
